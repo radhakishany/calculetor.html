@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>calculator</title>  
+</head>
+<body>
+
+	<div class="wrapper">
+     	<div class="Friend">
+     		<input type="" placeholder="PHYSICS">
+     		<input type="" placeholder="CHEMISTRY">
+     		<input type="" placeholder="MATH">
+     		<input type="" placeholder="IT">
+     		<button>Show Numbers</button>
+     		<p></p>
+     		<h1></h1>
+     	</div>
+     </div> 
+
+     <script>
+     	let btn = document.querySelector("button");
+		let para = document.querySelector("p");
+		let input = document.querySelectorAll("input");
+		let h = document.querySelector("h1");
+		let sum = 0;
+
+		btn.onclick = () =>{
+			for(let i=0; i<input.length; i++){
+
+				 sum  += Number(input[i].value)
+			}
+			para.innerHTML=sum+ " =TOTAL NUMBER";
+		    h.innerHTML=((sum/400)*100 )+ "%";
+		    console.log("sum");
+			console.log(sum/400)*100;
+		}
+
+		// btn.onclick = ()=>{
+		// 	for(let i=0; i<input.length;i++){
+		// 		sum += Number(input[1].value)
+		// 	}
+
+				// console.log("sum");
+				// console.log(sum/400)*100;
+		// }
+     	
+
+     </script>
+	
+</body>
+</html>
